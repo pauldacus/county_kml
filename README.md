@@ -32,8 +32,9 @@ This is how I do it for MultiGeometry tags ("c" is a county object in Rails):
 This is an easy way to preserve all the KML features for MultiGeometry, innerBoundaryIs, and outerBoundaryIs features for KML Polygons.
 
 Example data:
+```
 State  | County                 | id   | parent
--------|------------------------|------|--------
+-------|------------------------|------|-------
  CO    | Denver                 |  336 |       
  CO    | Denver                 |  337 |       
  CO    | Denver                 |  338 |    337
@@ -48,7 +49,7 @@ State  | County                 | id   | parent
  CO    | Denver                 |  347 |    337
  CO    | Denver                 |  348 |    337
  CO    | Denver                 |  349 |    337
-
+```
 This is for ~surprise~, Denver county, Colorado. The columns are state, county, id, parent (coordinates column omitted for readability).
 You can see that rows with id's 336 & 337 are separate Polygons (eg: they have more than one repeating {state,county} combination, {'CO','Denver'} in this case), 
 which means the Placemark for Denver county will have a MultiGeometry tag which contains 2 Polygon tags.
@@ -56,7 +57,7 @@ You can also see that all the rows with 337 in the parent column will have their
 
 The tags for the above data would look roughly like this:
 
-
+```
        <MultiGeometry>
         <Polygon>
           <outerBoundaryIs>
@@ -145,3 +146,4 @@ The tags for the above data would look roughly like this:
         </Polygon>
       </MultiGeometry>
     </Placemark>
+```
