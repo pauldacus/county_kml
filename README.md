@@ -61,10 +61,6 @@ The tags for the above data would look roughly like this:
     <Placemark>
       <name>Denver, CO</name>
       <description><![CDATA[<div>Denver, CO</div>
-<div>CITIES: Denver</div>
-<hr/>
-<div>81 SELF STORAGE LOCATIONS</div>
-<div>POPULATION:649495</div>
 ]]></description>
       <styleUrl>Red</styleUrl>
       <MultiGeometry>
