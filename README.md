@@ -32,7 +32,8 @@ This is how I do it for MultiGeometry tags ("c" is a county object in Rails):
 This is an easy way to preserve all the KML features for MultiGeometry, innerBoundaryIs, and outerBoundaryIs features for KML Polygons.
 
 Example data:
-
+State  | County                 | id   | parent
+-------|------------------------|------|--------
  CO    | Denver                 |  336 |       
  CO    | Denver                 |  337 |       
  CO    | Denver                 |  338 |    337
